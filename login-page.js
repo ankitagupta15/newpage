@@ -6,7 +6,6 @@ var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
 })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-9DYNKKOX8BGS-1");
 
 
-
 //feedback function
 function feedback(){
   document.getElementById("feedback").innerHTML = "Feedback Button is Clicked";
