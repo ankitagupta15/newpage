@@ -3,8 +3,11 @@ const loginForm = document.querySelector('.login-form');
 
 // add an event listener to the login form
 function signIn(){
-  const username = document.getElementById.("id").value;
-  const password = document.getElementById.("pass").value;
+  const name = document.getElementById.("id");
+  const pas = document.getElementById.("pass");
+  const username = name.name.value;
+  const password = pas.pass.value;
+  
   if ((username === "ankita" && password === "123") || (username=== "sid" && password === "123") || (username==="lakshya" && password === "123") || (username==="neha" && password === "123") || (username === "mishti" && password === "123") || (username === "anku" && password === "123") || (username === "Pratap" && password === "123") || (username === "kunal" && password === "123")) {
         webengage.user.login(username);
 
