@@ -2,8 +2,7 @@
 const loginForm = document.querySelector('.login-form');
 
 // add an event listener to the login form
-loginForm.addEventListener('submit', (event) => {
-  event.preventDefault();
+function signIn(){
   const username = event.target.querySelector('input[type="text"]').value;
   const password = event.target.querySelector('input[type="password"]').value;
   if ((username === "ankita" && password === "123") || (username=== "sid" && password === "123") || (username==="lakshya" && password === "123") || (username==="neha" && password === "123") || (username === "mishti" && password === "123") || (username === "anku" && password === "123") || (username === "Pratap" && password === "123") || (username === "kunal" && password === "123")) {
