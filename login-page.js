@@ -1,27 +1,40 @@
-//astrinsic px code
-(function(n,t,a,e,co){var i="aptrinsic";n[i]=n[i]||function(){
-  (n[i].q=n[i].q||[]).push(arguments)},n[i].p=e;n[i].c=co;
-var r=t.createElement("script");r.async=!0,r.src=a+"?a="+e;
-var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
-})(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-RDSEZXDYZ5TP-1",{fullDomainCookie: true});
+// get the login form
+const loginForm = document.querySelector('.login-form');
 
-//feedback function
-function feedback(){
-  document.getElementById("feedback").innerHTML = "Feedback Button is Clicked";
+// add an event listener to the login form
+loginForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const username = event.target.querySelector('input[type="text"]').value;
+  const password = event.target.querySelector('input[type="password"]').value;
+  if (username === 'heena' && password === '123') {
+    sessionStorage.setItem('loggedIn', true);
+    window.location.replace('home.html');
+  } else {
+    alert('Invalid username or password');
+  }
+});
+
+// function to check if user is logged in
+function isLoggedIn() {
+  const loggedIn = sessionStorage.getItem('loggedIn');
+  if (loggedIn === 'true') {
+    return true;
+  }
+  return false;
 }
 
-function zero(){
-  document.getElementById("number").innerHTML = "0";
-  aptrinsic('track', 'zero', {"name":"zero"}); 
-
+// function to redirect to login page if not logged in
+function requireLogin() {
+  if (!isLoggedIn()) {
+    window.location.replace('index.html');
+  }
 }
 
-function one(){
-  document.getElementById("number").innerHTML = "1";
-  aptrinsic('track', 'one', {"name":"one"}); 
+// add event listener to logout button
+function logout() {
+  sessionStorage.setItem('loggedIn', false);
+  window.location.replace('index.html');
 }
 
-
-function newpage(){
-  window.location.href="index.html"
-}
+// redirect to login page if not logged in
+requireLogin();
