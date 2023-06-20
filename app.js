@@ -1,6 +1,3 @@
-// get the login form
-const loginForm = document.querySelector('.login-form');
-
 // add an event listener to the login form
 function signIn(){
   const username = document.getElementById("id").value;
@@ -74,7 +71,6 @@ function signIn(){
       alert("You have successfully logged in.");
       window.location.href="home.html";
       webengage.track('MainPageView');
-      sessionStorage.setItem('loggedIn', true);
       }else {
             alert('Invalid username or password');
         }
@@ -85,5 +81,3 @@ function signIn(){
 function logout() {
  window.location.href="index.html";
 }
-
-
