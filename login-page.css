@@ -1,134 +1,161 @@
-html {
-    height: 100%;
-  }
-  
-  body {
-    margin: 0;
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-  }
-  
-  h2{
-    color: #3a3a3a;
-  }
+/* global styles */
 
-  #login-error-msg-holder {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-  }
-  
-  #login-error-msg {
-    width: 23%;
-    text-align: center;
-    margin: 0;
-    padding: 5px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #8a0000;
-    border: 1px solid #8a0000;
-    background-color: #e58f8f;
-    opacity: 0;
-  }
-  
-  #error-msg-second-line {
-    display: block;
-  }
-  
-  #login-form {
-    justify-items: center;
-    align-items: center;
-  }
-  
-  .login-form-field::placeholder {
-    color: #3a3a3a;
-  }
-  
-  .login-form-field {
-    border: none;
-    border-bottom: 1px solid #3a3a3a;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    outline: none;
-    padding: 0px 0px 5px 5px;
-  }
-  
-  #login-form-submit {
-    padding: 7px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    background-color: #3a3a3a;
-    cursor: pointer;
-    outline: none;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  header{
-    background: #b3b3b1;
-    height: 80px;
-    width: 100%;
-    position: absolute;
-    margin: 0%;
-    border: 0px;
-  }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-  #mypage{
-    text-align: center;
-  }
-  #mypage a{
-    text-decoration: #020202;
-    color: #050404;
-    font-family: serif;
-  }
+/* header styles */
+header {
+  align-items: center;
+  text-align: center;
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  margin: 0%;
+  border: 0px;
+}
 
-  #menu{
-    background: #020202;
-    padding: 6px 40px 6px 40px;
-    text-align: center;
-  }
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
 
-  #menu a{
-    color : #c5d6db;
-    text-decoration: none;
-    font-size: 14px;
-    font-family: "Arial Narrow";  
-  }
+header button {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
 
-  #menu a:hover{
-    color: #10a2f7;
-  }
-  
-  #main-holder {
-    padding-top: 5%;
-    background-color: #ffffff;
-  }
+#mypage{
+  padding-top: 1%;
+  text-align: center;
+}
+#mypage a{
+  text-decoration: #020202;
+  color: #050404;
+  font-family: serif;
+}
 
-  #welcome{
-    text-align: center; 
-    font-size: 20px; 
-  }
+/* Menu */
 
-  #para{
-    padding-top: 5%;
-    width: 80%;
-    padding-left: 10%;
-    text-align: left;
-    font-size:small;
-  }
+#menu{
+  background: #020202;
+  padding: 6px 40px 6px 40px;
+  text-align: center;
+}
 
-  #image{
-    width: 300px;
-    height: 200px;
-  }
+#menu a{
+  color : #c5d6db;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Arial Narrow";  
+}
 
-  #object{
-    width: 300px;
-    height: 500px;
-  }
+#menu a:hover{
+  color: #10a2f7;
+}
 
-  #table{
-    margin-left: auto;
-    margin-right: auto;
-  }
+/* Main Content */
+
+main{
+  padding-top: 5%;
+}
+
+/* form styles */
+form {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* content styles */
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact{
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+/* home page styles */
+h2 {
+  margin-top: 0;
+}
+
+h1{
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+/* logout button styles */
+.logout {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.logout button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+footer{
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 40px; 
+}
