@@ -3,8 +3,8 @@ const loginForm = document.querySelector('.login-form');
 
 // add an event listener to the login form
 function signIn(){
-  const name = document.getElementById.("id");
-  const pas = document.getElementById.("pass");
+  const name = document.getElementById("id");
+  const pas = document.getElementById("pass");
   const username = name.name.value;
   const password = pas.pass.value;
   
