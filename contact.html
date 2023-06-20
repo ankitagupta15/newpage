@@ -1,35 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
-  <link rel="stylesheet" href="login-page.css">
-  <script defer src="login-page.js"></script>
-</head>
-
-<body>
-  
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
     <header>
-      <h2 id="mypage"><a href="signin.html">My Page</a></h2>
-      <nav id="menu">
-        <a href="index.html">Home</a> &nbsp;&nbsp;&nbsp;
-        <a href="about.html">About Us</a>&nbsp;&nbsp;&nbsp;
-        <a href="contact.html">Contact</a> &nbsp;&nbsp;&nbsp;
-    </nav>
-  </header>
-  <main id="main-holder">
-    <div id="para"></div>
-    <input type="button" value="Contact us via Feedback" id="login-form-submit" onclick="feedback()">
-    <br><p id="feedback"></p>
-    <p>
-      <h1 id="C">Customer Change</h1>
-    </p>
-    <table id="table">
-      <tr><td><input type="button" value="Click for 0 to appear" id="zero" onclick="zero()"></td>
-      <td><input type="button" value="Click for 1 to appear" id="one" onclick="one()"></td></tr>
-     <tr><td><h3 id="number"></h3></td></tr>
-    </table>
-  </main>
+        <h2 id="mypage"><a href="home.html">www.mypage.com</a></h2>
+            <nav id="menu">
+                <a href="home.html">Home</a>&nbsp;&nbsp;&nbsp;
+                <a href="about.html">About</a>&nbsp;&nbsp;&nbsp;
+                <a href="contact.html">Contact</a>&nbsp;&nbsp;&nbsp;
+                <a href="#" onclick="logout()">Logout</a>
+            </nav>
+    </header>
+
+    <main>
+      <div id="contact">
+      <h1>Contact Us</h1>
+
+      <p>Thank you for your interest in contacting us! You can reach us using the following methods:</p>
+
+      <ul>
+        <li>Email: info@mywebsite.com</li>
+        <li>Phone: (123) 456-7890</li>
+        <li>Address: 123 Main St, Anytown USA</li>
+      </ul>
+
+      <p>You can also fill out the form below to send us a message:</p>
+    </div>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+  
+    </main>
+    <script src="app.js"></script>
+    <footer>
+      <p>&copy; 2023 My App. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
